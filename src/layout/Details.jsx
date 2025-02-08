@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useGeolocated } from "react-geolocated";
 
 import { useNavigate, useSearchParams } from "react-router";
-import DetailsMainDiv from "../Pages/DetailsPage/DetailsMainDiv";
+import DetailsMainDiv from "../Pages/DetailsPage/DetailsmainDiv";
 import { IoIosArrowRoundBack } from "react-icons/io";
 
 
