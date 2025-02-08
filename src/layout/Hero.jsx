@@ -18,7 +18,7 @@ const Hero = () => {
   })
 
 
-  const BASE_URL = `http://api.weatherapi.com/v1/current.json?key=f82792ec25ba4a1aa31140752241010`
+  const BASE_URL = `https://api.weatherapi.com/v1/current.json?key=f82792ec25ba4a1aa31140752241010`
   
 
 
