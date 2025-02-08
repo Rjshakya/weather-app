@@ -21,7 +21,7 @@ const Header = () => {
   const { data, isLoading, error } = useQuery({
     queryKey: ["cityLists", inputVal],
     queryFn: async () => {
-      let url = `http://api.weatherapi.com/v1/search.json?key=f82792ec25ba4a1aa31140752241010&q=${inputVal}`;
+      let url = `https://api.weatherapi.com/v1/search.json?key=f82792ec25ba4a1aa31140752241010&q=${inputVal}`;
       const res = await fetch(url);
 
       if (res.ok) {
