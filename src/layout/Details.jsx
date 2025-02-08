@@ -1,8 +1,5 @@
 import React, { useEffect } from "react";
 
-import HeroDiv from "../components/hero/HeroDiv";
-import Header from "../components/header/Header";
-
 import { useQuery } from "@tanstack/react-query";
 import { useGeolocated } from "react-geolocated";
 
@@ -10,7 +7,7 @@ import { useNavigate, useSearchParams } from "react-router";
 import DetailsMainDiv from "../Pages/DetailsPage/DetailsMainDiv";
 import { IoIosArrowRoundBack } from "react-icons/io";
 
-// http://api.weatherapi.com/v1/forecast.json?key=f82792ec25ba4a1aa31140752241010&q=London&days=5&aqi=no&alerts=no
+
 const Details = () => {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
