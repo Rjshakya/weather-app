@@ -25,7 +25,7 @@ const Details = () => {
     userDecisionTimeout: 2000,
   });
 
-  const BASE_URL = `http://api.weatherapi.com/v1/forecast.json?key=f82792ec25ba4a1aa31140752241010`;
+  const BASE_URL = `https://api.weatherapi.com/v1/forecast.json?key=f82792ec25ba4a1aa31140752241010`;
 
   const { data, error, isLoading } = useQuery({
     queryKey: ["currentLocWeather", coords, searchParams.get("q")],
