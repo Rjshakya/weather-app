@@ -42,7 +42,7 @@ const HeroDiv = ({ currentLocationWeatherData, loading, error }) => {
 
   return (
     <div className="hero-container px-3 object-cover m ">
-      <div className=" absolute top-0 left-0 right-0 bottom-0 z-[-1] ">
+      {/* <div className=" absolute top-0 left-0 right-0 bottom-0 z-[-1] ">
         <svg
           className=" h-full md:hidden"
           xmlns="http://www.w3.org/2000/svg"
@@ -169,7 +169,7 @@ const HeroDiv = ({ currentLocationWeatherData, loading, error }) => {
             ></rect>
           </g>
         </svg>
-      </div>
+      </div> */}
 
       <div className="hero-wrapper py-4 mt-4 flex flex-col md:border md:rounded-2xl md:px-6 md:border-zinc-700 ">
         <div className="location ">
@@ -181,7 +181,7 @@ const HeroDiv = ({ currentLocationWeatherData, loading, error }) => {
           </div>
         </div>
 
-        <div className="main-content text-black md:text-black md:dark:text-white">
+        <div className="main-content  md:text-black md:dark:text-white">
           <div>
           
             {error && "error occured"}

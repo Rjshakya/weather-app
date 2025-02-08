@@ -15,9 +15,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { BeatLoader } from 'react-spinners'
-
-
+import { BeatLoader } from "react-spinners";
 
 const DetailsMainDiv = ({ currentLocationWeatherData, loading, error }) => {
   const date = new Date();
@@ -61,7 +59,7 @@ const DetailsMainDiv = ({ currentLocationWeatherData, loading, error }) => {
 
   return (
     <div className="details-container px-3 object-cover mb-10 ">
-      <div className=" absolute top-0 left-0 right-0 bottom-0 z-[-1] ">
+      {/* <div className=" absolute top-0 left-0 right-0 bottom-0 z-[-1] ">
         <svg
           className=" h-full md:hidden"
           xmlns="http://www.w3.org/2000/svg"
@@ -188,7 +186,7 @@ const DetailsMainDiv = ({ currentLocationWeatherData, loading, error }) => {
             ></rect>
           </g>
         </svg>
-      </div>
+      </div> */}
 
       <div className="hero-wrapper py-4 mt-4 flex flex-col md:border md:rounded-2xl md:px-6 md:border-zinc-300 md:dark:border-zinc-700 ">
         <div className="location ">
@@ -200,7 +198,7 @@ const DetailsMainDiv = ({ currentLocationWeatherData, loading, error }) => {
           </div>
         </div>
 
-        <div className="main-content text-black md:text-black md:dark:text-white">
+        <div className="main-content md:text-black md:dark:text-white">
           <div>
             {error && "error occured"}
             <div className="heading  w-full relative flex justify-center ">
@@ -258,8 +256,8 @@ const DetailsMainDiv = ({ currentLocationWeatherData, loading, error }) => {
                         key={item.time_epoch}
                         className="forcast-card-wrapper max-w-[22rem] w-full flex-none"
                       >
-                        <div className="forcast-card-main  px-4  pb-5 pt-2 border dark:border-zinc-600/65 border-zinc-300 rounded-3xl dark:bg-zinc-900">
-                          <div className="body mb-8 text-center ">
+                        <div className="forcast-card-main  px-4  pb-5 pt-2 border dark:border-zinc-600/65 border-zinc-300 rounded-3xl md:dark:bg-zinc-900">
+                          <div className="body mb-15 mt-4 text-center ">
                             <div className="tem flex gap-1 ">
                               <span className="text-7xl font-medium tracking-tighter ">
                                 {item.temp_c}
@@ -274,11 +272,11 @@ const DetailsMainDiv = ({ currentLocationWeatherData, loading, error }) => {
                               </span>
                             </div>
                           </div>
-                          <div className="footer-wrap flex w-full justify-between dark:text-zinc-400">
+                          <div className="footer-wrap flex items-center w-full justify-between dark:text-zinc-400">
                             <span className=" flex items-center gap-2">
-                              <IoMdSunny size={20} />
-                              <p className=" tracking-tighter font-mono font-medium text-xl">
-                                {conditionText ? conditionText : ""}
+                            {item ? <img src={item.condition?.icon} alt={item.condition?.text} className=" w-12 h-12" /> : ""}
+                              <p className=" tracking-tighter font-mono font-medium text-lg">
+                                {item ? item.condition?.text : ""}
                               </p>
                             </span>
                             <div className="time text-xl">
@@ -301,7 +299,7 @@ const DetailsMainDiv = ({ currentLocationWeatherData, loading, error }) => {
             </h3>
 
             <div className="chart-wrapper  py-4 px-4  grid md:grid-cols-2 grid-cols-1">
-              <div className="chart-main w-full h-[70vh] pr-8 py-5 border rounded-3xl dark:border-zinc-600 dark:bg-zinc-900">
+              <div className="chart-main w-full md:h-[70vh] h-[50vh] pr-8 py-5 border rounded-3xl dark:border-zinc-600 dark:bg-zinc-900">
                 <ResponsiveContainer width="100%" height="100%">
                   <LineChart data={chartData}>
                     <Line

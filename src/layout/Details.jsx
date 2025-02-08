@@ -7,7 +7,6 @@ import { useNavigate, useSearchParams } from "react-router";
 import DetailsMainDiv from "../Pages/DetailsPage/DetailsMainDiv";
 import { IoIosArrowRoundBack } from "react-icons/io";
 
-
 const Details = () => {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
@@ -46,10 +45,9 @@ const Details = () => {
     // enabled : coords?true:false || searchParams.get('q')?true:false
   });
 
-
   const handleBackBtn = () => {
-     navigate('/' , searchParams.set('q' , searchParams.get('q')))
-  }
+    navigate("/", searchParams.set("q", searchParams.get("q")));
+  };
 
   return (
     <div className="main-div-hero  overflow-hidden  grid grid-cols-4">
@@ -57,7 +55,10 @@ const Details = () => {
         {/* <Header /> */}
 
         <div className="back-btn px-4 pt-4">
-          <button onClick={handleBackBtn} className="grid place-content-center bg-zinc-800 rounded-xl active:scale-90 hover:bg-zinc-800/55">
+          <button
+            onClick={handleBackBtn}
+            className="grid place-content-center dark:bg-zinc-800 bg-zinc-300 rounded-xl active:scale-90 hover:bg-zinc-200 dark:hover:bg-zinc-800/55"
+          >
             <IoIosArrowRoundBack size={38} />
           </button>
         </div>
