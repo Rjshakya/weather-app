@@ -18,10 +18,11 @@ const Header = () => {
   const [inputVal, setInputVal] = useState("");
   const [searchParams, setSearchParams] = useSearchParams();
 
+  const API_KEY = import.meta.env.VITE_APP_KEY
   const { data, isLoading, error } = useQuery({
     queryKey: ["cityLists", inputVal],
     queryFn: async () => {
-      let url = `https://api.weatherapi.com/v1/search.json?key=f82792ec25ba4a1aa31140752241010&q=${inputVal}`;
+      let url = `https://api.weatherapi.com/v1/search.json?key=${API_KEY}&q=${inputVal}`;
       const res = await fetch(url);
 
       if (res.ok) {

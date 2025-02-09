@@ -17,8 +17,8 @@ const Hero = () => {
     userDecisionTimeout : 2000
   })
 
-
-  const BASE_URL = `https://api.weatherapi.com/v1/current.json?key=f82792ec25ba4a1aa31140752241010`
+  const API_KEY  = import.meta.env.VITE_APP_KEY
+  const BASE_URL = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}`
   
 
 
