@@ -25,7 +25,7 @@ const Details = () => {
   });
 
   const API_KEY = import.meta.env.VITE_APP_KEY
-  const BASE_URL = `https://api.weatherapi.com/v1/forecast.json?${API_KEY}`;
+  const BASE_URL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}`;
 
   const { data, error, isLoading } = useQuery({
     queryKey: ["currentLocWeather", coords, searchParams.get("q")],
